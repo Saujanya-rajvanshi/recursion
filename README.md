@@ -45,3 +45,24 @@ print();
 return 0;
 }
 ```
+###### print name times
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void f(int i, int n) {
+    if (i > n)   // base condition
+        return;
+
+    cout << "Saujanya" << endl;   // print your name
+    f(i + 1, n);                  // recursive call
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    f(1, n);
+    return 0;
+}
+```
