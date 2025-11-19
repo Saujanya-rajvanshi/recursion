@@ -21,7 +21,7 @@ print();
 return 0;
 }
 ```
-
+###### print no. upto some point
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
