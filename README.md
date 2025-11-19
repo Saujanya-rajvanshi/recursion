@@ -69,6 +69,7 @@ int main() {
 
 ###### sum of first n numbers
 ```cpp
+\\paramaterised way
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -86,6 +87,26 @@ int main() {
     cin >> n;              // example: n = 3
 
     f(n, 0);               // start with sum = 0
+    return 0;
+}
+```
+```cpp
+\\functional way
+#include <bits/stdc++.h>
+using namespace std;
+
+int f(int n) {
+    if (n == 0)           // base condition
+        return 0;
+
+    return n + f(n - 1);  // functional recursion
+}
+
+int main() {
+    int n;
+    cin >> n;             // example: 3
+
+    cout << f(n);
     return 0;
 }
 ```
