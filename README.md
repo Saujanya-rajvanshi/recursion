@@ -141,4 +141,32 @@ int main() {
     return 0;
 }
 ```
+###### check palindrom
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+bool f(int i, string &s) {
+    int n = s.size();
+
+    if (i >= n / 2)      // base condition
+        return true;
+
+    if (s[i] != s[n - i - 1])
+        return false;
+
+    return f(i + 1, s);  // recursive call
+}
+
+int main() {
+    string s;
+    cin >> s;
+
+    if (f(0, s))
+        cout << "Palindrome";
+    else
+        cout << "Not Palindrome";
+
+    return 0;
+}
+```
