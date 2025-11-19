@@ -66,3 +66,26 @@ int main() {
     return 0;
 }
 ```
+
+###### sum of first n numbers
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void f(int i, int sum) {
+    if (i < 1) {           // base condition
+        cout << sum;      // print final sum
+        return;
+    }
+
+    f(i - 1, sum + i);     // recursive call
+}
+
+int main() {
+    int n;
+    cin >> n;              // example: n = 3
+
+    f(n, 0);               // start with sum = 0
+    return 0;
+}
+```
