@@ -110,3 +110,35 @@ int main() {
     return 0;
 }
 ```
+
+###### reverse an array
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void f(int l, int r, vector<int> &a) {
+    if (l >= r)      // base condition
+        return;
+
+    swap(a[l], a[r]);    // swap left and right
+
+    f(l + 1, r - 1, a);  // recursive call
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+
+    f(0, n - 1, a);      // call function to reverse
+
+    for (int i = 0; i < n; i++)
+        cout << a[i] << " ";
+
+    return 0;
+}
+```
+```cpp
