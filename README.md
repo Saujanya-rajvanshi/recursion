@@ -1,5 +1,61 @@
 # recursion
 
+## INDEX 
+- [basic](#basic)
+- [important questions](#important-questions)
+- [striver questions](#striver-questions)
+
+
+##### basic
+---
+
+## Definition
+
+**Recursion** is a technique where a function **calls itself** to solve a problem by breaking it into **smaller subproblems** until a **base case** is reached.
+
+---
+
+## 🧩 Key components
+1. **Base case** → stops recursion
+2. **Recursive case** → function calls itself
+3. **Smaller input** → moves toward base case
+
+* Without a base case → **infinite recursion** 
+
+---
+
+## 🔧 General form
+```cpp
+return_type function(parameters) {
+    if (base_condition)
+        return value;
+    return function(smaller_input);
+}
+```
+
+## 🔄 Types of recursion
+
+1. **Direct recursion**
+   Function calls itself directly
+2. **Indirect recursion**
+   Function A → Function B → Function A
+3. **Tail recursion**
+   Recursive call is the **last statement**
+4. **Non-tail recursion**
+   Work remains after recursive call
+
+---
+
+### important questions
+---
+
+---
+
+
+---
+
+
+### striver questions 
 ###### print endless no. 1
 ```cpp
 #include<bits/stdc++.h>
