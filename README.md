@@ -2,7 +2,7 @@
 
 ## INDEX 
 - [basic](#basic)
-- [important questions](#important-questions)
+- [relevant questions](#important-questions)
 - [striver questions](#striver-questions)
 
 
