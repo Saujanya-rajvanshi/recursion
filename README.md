@@ -56,7 +56,17 @@ return_type function(parameters) {
 
 
 ### striver questions 
-###### print endless no. 1
+- [print endless number one](#print-endless--number-one)
+- [print number upto some point](print-number-upto-some-point)
+- [print name times](#print-name-times)
+- [sum of first n numbers](#sum-of-first-n-numbers)
+- [reverse an array](#reverse-an-array)
+- [check palindrom](#check-palindrom)
+- [fibonaci series](#fibonaci-series)
+
+
+
+###### print endless number one
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -77,7 +87,7 @@ print();
 return 0;
 }
 ```
-###### print no. upto some point
+###### print number upto some point
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -101,7 +111,7 @@ print();
 return 0;
 }
 ```
-###### print name times
+###### print name times 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
