@@ -259,3 +259,141 @@ int main() {
 
 # HASHING 
 
+**Hashing = storing and searching data in constant time using a key.**
+
+It uses a **hash function** to convert a key into an index of an array.
+
+```
+index = hash(key)
+```
+
+Example:
+
+```
+key = 27
+hash(key) = 27 % 10 = 7
+store at index 7
+```
+
+### Components
+
+1. **Hash function**
+
+   * Converts key → array index
+   * Should be fast and distribute keys evenly
+
+2. **Hash table**
+
+   * Array where values are stored using hashed index
+
+### Basic Operations
+
+* Insert → O(1)
+* Search → O(1)
+* Delete → O(1)
+
+(average case)
+
+### Collision
+
+When two keys get the same index.
+
+Example:
+
+```
+27 % 10 = 7
+37 % 10 = 7   ← collision
+```
+
+### Collision Handling Methods
+
+1. **Separate Chaining**
+
+   * Each index stores a list (vector/linked list)
+   * Multiple values stored at same index
+
+```
+table[7] → [27, 37, 47]
+```
+
+2. **Open Addressing**
+
+   * Find another empty index
+
+Types:
+
+* Linear Probing: `(h + i) % size`
+* Quadratic Probing: `(h + i²) % size`
+* Double Hashing: use second hash function
+
+### Load Factor
+
+```
+load factor = number of elements / table size
+```
+
+Higher load factor → more collisions → slower
+
+### Rehashing
+
+When table becomes too full:
+
+* Create bigger table
+* Reinsert all elements with new hash
+
+### Good Hash Function Properties
+
+* Deterministic (same input → same output)
+* Uniform distribution
+* Fast to compute
+* Minimizes collisions
+
+### Applications of Hashing
+
+* Searching in O(1)
+* Counting frequency of elements
+* Finding duplicates
+* Two Sum problem
+* Caching
+* Password storage (with secure hashes)
+* Dictionaries / Maps / Sets
+
+### Hashing in C++ STL
+
+1. **unordered_map** (key → value)
+
+```cpp
+unordered_map<int,int> mp;
+mp[5] = 10;        // insert
+cout << mp[5];     // access
+```
+
+2. **unordered_set** (only keys)
+
+```cpp
+unordered_set<int> st;
+st.insert(5);
+if(st.find(5) != st.end()) cout << "Found";
+```
+
+Average Time Complexity:
+
+* Insert/Search/Delete → **O(1)**
+  Worst case (many collisions) → **O(n)**
+
+### When to use Hashing
+
+* When order does not matter
+* When fast lookup is needed
+* When working with large data
+
+### Limitations
+
+* No ordering of elements
+* Extra memory for hash table
+* Worst case can be slow if many collisions
+
+**In short:**
+Hashing = fast lookup by converting keys into array positions using a hash function.
+
+
