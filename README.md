@@ -1,4 +1,8 @@
-# recursion
+# Recursion and Hashing 
+- [Recursion](#RECURSION)
+- [Hashing](#HASHING)
+
+# RECURSION
 
 ## INDEX 
 - [basic](#basic)
