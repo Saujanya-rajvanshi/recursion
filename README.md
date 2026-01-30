@@ -279,6 +279,73 @@ hash(key) = 27 % 10 = 7
 store at index 7
 ```
 
+### code for number hashing 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int hash[10000000] = {0};       //<----- either this ,here it can take 1e7
+
+int main() {
+    int n;
+    cin >> n; 
+
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    // frequency array (assuming values 0–12)
+    int hash[13] = {0};       //<----- or this , in here it can take 1e6
+
+    // precompute frequency
+    for(int i = 0; i < n; i++) {
+        hash[arr[i]]++;
+    }
+
+    // one query input
+    int x;
+    cin >> x;
+
+    // output frequency of x
+    cout << hash[x];
+
+    return 0;
+}
+```
+
+### code for character hashing
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    // precompute
+    int hash[256] = {0};
+
+    for(int i = 0; i < s.size(); i++) {
+        hash[s[i]]++;
+    }
+
+    int q;
+    cin >> q;
+
+    while(q--) {
+        char c;
+        cin >> c;
+
+        // fetch frequency of character c
+        cout << hash[c] << endl;
+    }
+
+    return 0;
+}
+```
+### as array hashing has a limit of 10^7 so for above we use stl 
+
+
 ### Components
 
 1. **Hash function**
